@@ -16,5 +16,8 @@
         "psr-4": {
             "serhatozles\\elfinder\\": ""
         }
+    },
+    "require": {
+        "yiisoft/yii2-jui": "*"
     }
 }
