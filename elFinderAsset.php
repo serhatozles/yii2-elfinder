@@ -25,7 +25,8 @@ class elFinderAsset extends \yii\web\AssetBundle
 	'js/elfinder.min.js',
     ];
     public $depends = [
-        'yii\web\JqueryAsset'
+        'yii\web\JqueryAsset',
+        'yii\jui\JuiAsset',
     ];
 
     public function init()
