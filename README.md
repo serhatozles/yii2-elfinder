@@ -2,6 +2,8 @@ elFinder
 ========
 Yii2 Elfinder
 
+I'M DEVELOPING, NOT READY YET
+
 Installation
 ------------
 
