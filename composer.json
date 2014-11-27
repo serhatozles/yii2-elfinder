@@ -1,6 +1,7 @@
 {
     "name": "serhatozles/yii2-elfinder",
     "description": "Yii2 Elfinder",
+    "homepage": "https://github.com/serhatozles/yii2-elfinder",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "GPL-2.0+",
@@ -10,9 +11,7 @@
             "email": "serhatozles@gmail.com"
         }
     ],
-    "require": {
-        "yiisoft/yii2": "*"
-    },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "serhatozles\\elfinder\\": ""
