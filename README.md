@@ -31,15 +31,13 @@ Once the extension is installed, simply use it in your code by  :
 
 View:
 ```php
-<?php 
     echo \serhatozles\elfinder\elFinder::widget([
 	'ajax' => Url::to(['site/elfinder']),
     ]); 
-?>```
+```
 
 Controller Action:
 ```php
-<?php 
     public function actionElfinder() {
 
 	$elFinder = new \serhatozles\elfinder\elFinder;
@@ -55,4 +53,4 @@ Controller Action:
 	    ]
 	]);
     }
- ?>```
+```
