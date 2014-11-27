@@ -27,12 +27,14 @@ class elFinder extends \yii\base\Widget {
 
 		$this->getView()->registerJsFile(__DIR__ . "/assets/js/i18n/elfinder." . $this->language . ".js");
 	    }
-	    
-            $this->options['id'] = $this->getId();
+
+	    if(empty($this->options['id'])) {
+		$this->options['id'] = $this->getId();
+	    }
 
 	    $this->getView()->registerJs("$('#" . $this->options['id'] . "').elfinder(" . Json::encode($this->options) . ").elfinder('instance');");
 
-	    return '<div id="' . $this->options['id'] .'"></div>';
+	    return '<div id="' . $this->options['id'] . '"></div>';
 	}
     }
 
