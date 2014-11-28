@@ -169,7 +169,7 @@ abstract class elFinderVolumeDriver {
 		// mime.types file path (for mimeDetect==internal)
 		'mimefile'        => '',
 		// directory for thumbnails
-		'tmbPath'         => '.tmb',
+		'tmbPath'         => 'tmb',
 		// mode to create thumbnails dir
 		'tmbPathMode'     => 0777,
 		// thumbnails dir URL. Set it if store thumbnails outside root directory
