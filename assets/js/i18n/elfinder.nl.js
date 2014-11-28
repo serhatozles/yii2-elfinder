@@ -1,7 +1,7 @@
 /**
  * Dutch translation
  * @author Barry vd. Heuvel <barry@fruitcakestudio.nl>
- * @version 2012-04-02
+ * @version 2014-11-26
  */
 if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object') {
 	elFinder.prototype.i18.nl = {
@@ -50,13 +50,15 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'errRename'            : 'Kan "$1" niet hernoemen.',
 			'errCopyFrom'          : 'Bestanden kopiëren van "$1" is niet toegestaan.',
 			'errCopyTo'            : 'Bestanden kopiëren naar "$1" is niet toegestaan.',
-			'errUploadCommon'      : 'Upload fout.',
-			'errUpload'            : 'Kan "$1" niet uploaden.',
+			'errUpload'            : 'Upload fout.',
+			'errUploadFile'        : 'Kan "$1" niet uploaden.',
 			'errUploadNoFiles'     : 'Geen bestanden gevonden om te uploaden.',
-			'errMaxSize'           : 'Data overschrijdt de maximale grootte.',
-			'errFileMaxSize'       : 'Bestand overschrijdt de maximale grootte.',
+			'errUploadTotalSize'   : 'Data overschrijdt de maximale grootte.',
+			'errUploadFileSize'    : 'Bestand overschrijdt de maximale grootte.',
 			'errUploadMime'        : 'Bestandstype niet toegestaan.',
 			'errUploadTransfer'    : '"$1" overdrachtsfout.', 
+			'errNotReplace'        : 'Object "$1" bestaat al op deze locatie en kan niet vervangen worden door een ander type object.',
+			'errReplace'           : 'Kan "$1" niet vervangen.',
 			'errSave'              : 'Kan "$1" niet opslaan.',
 			'errCopy'              : 'Kan "$1" niet kopiëren.',
 			'errMove'              : 'Kan "$1" niet verplaatsen.',
@@ -68,10 +70,28 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'errNoArchive'         : 'Bestand is geen archief of geen ondersteund archief type.',
 			'errCmdNoSupport'      : 'Backend ondersteund dit commando niet.',
 			'errReplByChild'       : 'De map "$1" kan niet vervangen worden door een item uit die map.',
-			'errArcSymlinks'       : 'Om veiligheidsredenen kan een bestand met symlinks niet worden uitgepakt .',
+			'errArcSymlinks'       : 'Om veiligheidsredenen kan een bestand met symlinks of bestanden met niet toegestane namen niet worden uitgepakt .',
 			'errArcMaxSize'        : 'Archief overschrijdt de maximale bestandsgrootte.',
 			'errResize'            : 'Kan het formaat van "$1" niet wijzigen.',
-    			'errUsupportType'      : 'Bestandstype wordt niet ondersteund.',
+			'errResizeDegree'      : 'Ongeldig aantal graden om te draaien.',
+			'errResizeRotate'      : 'Afbeelding kan niet gedraaid worden.', 
+			'errResizeSize'        : 'Ongeldig afbeelding formaat.', 
+			'errResizeNoChange'    : 'Afbeelding formaat is niet veranderd.', 
+			'errUsupportType'      : 'Bestandstype wordt niet ondersteund.',
+			'errNotUTF8Content'    : 'Bestand "$1" is niet in UTF-8 and kan niet aangepast worden.', 
+			'errNetMount'          : 'Kan "$1" niet mounten.',   
+			'errNetMountNoDriver'  : 'Niet ondersteund protocol.',   
+			'errNetMountFailed'    : 'Mount mislukt.',    
+			'errNetMountHostReq'   : 'Host is verplicht.',
+			'errSessionExpires'    : 'Uw sessie is verlopen vanwege inactiviteit.',
+			'errCreatingTempDir'   : 'Kan de tijdelijke map niet aanmaken: "$1" ',
+			'errFtpDownloadFile'   : 'Kan het bestand niet downloaden vanaf FTP: "$1"',
+			'errFtpUploadFile'     : 'Kan het bestand niet uploaden naar FTP: "$1"',
+			'errFtpMkdir'          : 'Kan het externe map niet aanmaken op de FTP-server: "$1"',
+			'errArchiveExec'       : 'Er is een fout opgetreden bij het archivering van de bestanden: "$1" ',
+			'errExtractExec'       : 'Er is een fout opgetreden bij het uitpakken van de bestanden: "$1" ',
+			'errNetUnMount'        : 'Kan niet mounten', 
+			'errConvUTF8'          : 'Kan niet converteren naar UTF-8',
 			
 			/******************************* commands names ********************************/
 			'cmdarchive'   : 'Maak archief',
@@ -101,6 +121,8 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'cmdview'      : 'Bekijk',
 			'cmdresize'    : 'Formaat wijzigen',
 			'cmdsort'      : 'Sorteren',
+			'cmdnetmount'  : 'Mount netwerk volume',
+			'cmdnetunmount': 'Unmount',
 			
 			/*********************************** buttons ***********************************/ 
 			'btnClose'  : 'Sluit',
@@ -110,26 +132,35 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'btnCancel' : 'Annuleren',
 			'btnNo'     : 'Nee',
 			'btnYes'    : 'Ja',
+			'btnMount'  : 'Mount',
+			'btnApprove': 'Ga naar $1 & keur goed',
+			'btnUnmount': 'Unmount',
+			'btnConv'   : 'Converteer',
 			
 			/******************************** notifications ********************************/
 			'ntfopen'     : 'Bezig met openen van map',
 			'ntffile'     : 'Bezig met openen bestand',
-			'ntfreload'   : 'Bezig met inhoud map vernieuwen',
+			'ntfreload'   : 'Herladen map inhoud',
 			'ntfmkdir'    : 'Bezig met map maken',
 			'ntfmkfile'   : 'Bezig met Bestanden maken',
-			'ntfrm'       : 'Bezig met verwijderen bestanden',
+			'ntfrm'       : 'Verwijderen bestanden',
 			'ntfcopy'     : 'Kopieer bestanden',
 			'ntfmove'     : 'Verplaats bestanden',
-			'ntfprepare'  : 'Voorbereiden om bestanden te kopiëren',
+			'ntfprepare'  : 'Voorbereiden kopiëren',
 			'ntfrename'   : 'Hernoem bestanden',
-			'ntfupload'   : 'Bezig met uploaden bestanden',
-			'ntfdownload' : 'Bezig met downloaden bestanden',
+			'ntfupload'   : 'Bestanden uploaden actief',
+			'ntfdownload' : 'Bestanden downloaden actief',
 			'ntfsave'     : 'Bestanden opslaan',
 			'ntfarchive'  : 'Archief aan het maken',
-			'ntfextract'  : 'Bestanden uit het archief aan het uitpakken',
+			'ntfextract'  : 'Bestanden uitpakken actief',
 			'ntfsearch'   : 'Zoeken naar bestanden',
-			'ntfsmth'     : 'Iets aan het doen >_<',
+			'ntfsmth'     : 'Iets aan het doen',
 			'ntfloadimg'  : 'Laden van plaatje',
+			'ntfnetmount' : 'Mounten van netwerk volume',
+			'ntfnetunmount': 'Unmounten van netwerk volume',
+			'ntfdim'      : 'Opvragen afbeeldingen dimensies',
+			'ntfreaddir'  : 'Map informatie inlezen',
+			'ntfurl'      : 'URL van link ophalen',
 			
 			/************************************ dates **********************************/
 			'dateUnknown' : 'onbekend',
@@ -175,14 +206,11 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'Sat'         : 'Za',
 			
 			/******************************** sort variants ********************************/
-			'sortnameDirsFirst' : 'op naam (mappen eerst)', 
-			'sortkindDirsFirst' : 'op type (mappen eerst)', 
-			'sortsizeDirsFirst' : 'op grootte (mappen eerst)', 
-			'sortdateDirsFirst' : 'op datum (mappen eerst)', 
 			'sortname'          : 'op naam', 
 			'sortkind'          : 'op type', 
 			'sortsize'          : 'op grootte',
 			'sortdate'          : 'op datum',
+			'sortFoldersFirst'  : 'Mappen eerst',
 
 			/********************************** messages **********************************/
 			'confirmReq'      : 'Bevestiging nodig',
@@ -224,7 +252,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'help'            : 'Help',
 			'webfm'           : 'Web bestandsmanager',
 			'ver'             : 'Versie',
-			'protocol'        : 'protocol versie',
+			'protocolver'     : 'protocol versie',
 			'homepage'        : 'Project home',
 			'docs'            : 'Documentatie',
 			'github'          : 'Fork ons op Github',
@@ -258,6 +286,15 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'rotate-cw'	  : 'Draai 90 graden rechtsom',
 			'rotate-ccw'	  : 'Draai 90 graden linksom',
 			'degree'	  : '°',
+			'netMountDialogTitle' : 'Mount network volume',
+			'protocol'        : 'Protocol', 
+			'host'            : 'Host', 
+			'port'            : 'Poort',
+			'user'            : 'Gebruikersnaams', 
+			'pass'            : 'Wachtwoord', 
+			'confirmUnmount'  : 'Weet u zeker dat u $1 wil unmounten?',
+			'dropFilesBrowser': 'Sleep of plak bestanden vanuit de browser',
+			'dropPasteFiles'  : 'Sleep of plak bestanden hier',
 			
 			/********************************** mimetypes **********************************/
 			'kindUnknown'     : 'Onbekend',
