@@ -34,7 +34,15 @@ class elFinder extends \yii\base\Widget {
 		]
 	    ];
 	}
-	
+
+	$options['attributes'][] = [
+		    'pattern' => '@(tmb|\.quarantine)@si',
+		    'read' => false,
+		    'write' => false,
+		    'hidden' => true,
+		    'locked' => true
+	];
+
 	return $this->renderFile(__DIR__ . "/views/connect.php", ['options' => $options]);
     }
 

@@ -84,15 +84,6 @@ Controller Action:
 		    'URL' => Yii::getAlias('@web/files/'), // URL to files (REQUIRED)
 		    'mimeDetect' => 'internal',
 		    'onlyMimes' => ['image'],
-		    'attributes' => [
-			[
-			    'pattern' => '@(tmb|\.quarantine)@si',
-			    'read' => false,
-			    'write' => false,
-			    'hidden' => true,
-			    'locked' => true
-			]
-		    ]
 		],
 	    ]
 	]);
