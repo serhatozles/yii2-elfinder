@@ -82,6 +82,17 @@ Controller Action:
 		    'driver' => 'LocalFileSystem', // driver for accessing file system (REQUIRED)
 		    'path' => Yii::getAlias('@webroot/files/'), // path to files (REQUIRED)
 		    'URL' => Yii::getAlias('@web/files/'), // URL to files (REQUIRED)
+		    'mimeDetect' => 'internal',
+		    'onlyMimes' => ['image'],
+		    'attributes' => [
+			[
+			    'pattern' => '@(tmb|\.quarantine)@si',
+			    'read' => false,
+			    'write' => false,
+			    'hidden' => true,
+			    'locked' => true
+			]
+		    ]
 		],
 	    ]
 	]);
