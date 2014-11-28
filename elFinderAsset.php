@@ -9,7 +9,7 @@
 namespace serhatozles\elfinder;
 
 /**
- * elFinder bundle for \kartik\elfinder\elFinder.
+ * elFinder bundle for \serhatozles\elfinder\elFinder.
  *
  * @author Serhat OZLES <serhatozles@gmail.com>
  * @since 1.0
@@ -18,15 +18,16 @@ class elFinderAsset extends \yii\web\AssetBundle
 {
     
     public $css = [
+        '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css',
         'css/elfinder.min.css',
         'css/theme.css',
     ];
     public $js = [
+	'//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+	'//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js',
 	'js/elfinder.min.js',
     ];
     public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\jui\JuiAsset',
     ];
 
     public function init()

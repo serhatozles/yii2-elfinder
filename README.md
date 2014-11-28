@@ -2,7 +2,7 @@ elFinder
 ========
 Yii2 Elfinder
 
-I'M DEVELOPING, NOT READY YET
+See: http://elfinder.org/
 
 Installation
 ------------
@@ -29,6 +29,15 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
+Add Main.php
+```php
+'controllerMap' => [
+    'elfinder' => [
+	'class' => 'serhatozles\elfinder\Controller',
+    ]
+],
+```
+
 View:
 ```php
     echo \serhatozles\elfinder\elFinder::widget([
@@ -38,6 +47,9 @@ View:
 
 Controller Action:
 ```php
+
+    public $enableCsrfValidation = false;
+
     public function actionElfinder() {
 
 	$elFinder = new \serhatozles\elfinder\elFinder;
@@ -48,7 +60,6 @@ Controller Action:
 		    'driver' => 'LocalFileSystem', // driver for accessing file system (REQUIRED)
 		    'path' => Yii::getAlias('@webroot/files/'), // path to files (REQUIRED)
 		    'URL' => Yii::getAlias('@web/files/'), // URL to files (REQUIRED)
-		    'accessControl' => 'access'      // disable and hide dot starting files (OPTIONAL)
 		],
 	    ]
 	]);
