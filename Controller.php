@@ -8,7 +8,7 @@ use yii\web\Controller as BaseController;
 
 class Controller extends BaseController {
 
-    private $options = [
+    public $options = [
 	'uiOptions' => [
 	    'toolbar' => [
 		['back', 'forward'],
