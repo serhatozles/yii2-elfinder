@@ -35,7 +35,7 @@ class elFinder extends \yii\base\Widget {
 	    ];
 	}
 
-	$options['attributes'][] = [
+	$options['roots'][0]['attributes'][] = [
 		    'pattern' => '@(tmb|\.quarantine)@si',
 		    'read' => false,
 		    'write' => false,
