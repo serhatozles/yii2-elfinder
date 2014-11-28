@@ -34,6 +34,28 @@ Add Main.php
 'controllerMap' => [
     'elfinder' => [
 	'class' => 'serhatozles\elfinder\Controller',
+//	    'options' => ['uiOptions' => [
+//		    'toolbar' => [
+//			['back', 'forward'],
+//			['netmount'],
+//			['upload'],
+//			['open', 'download', 'getfile'],
+//			['info'],
+//			['quicklook'],
+//			['rm'],
+//			['edit', 'resize'],
+//			['search'],
+//			['view', 'sort'],
+//			['help']
+//		    ]
+//		],
+//		'contextmenu' => [
+//		    'navbar' => ['open', '|', 'info'],
+//		    'cwd' => ['reload', 'back', '|', 'upload', '|', 'sort', '|', 'info'],
+//		    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'edit', 'resize', '|', 'info']
+//		],
+//		'onlyMimes' => ["image"],
+//	    ]
     ]
 ],
 ```
