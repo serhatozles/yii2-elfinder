@@ -27,7 +27,7 @@ class Controller extends BaseController {
 	'contextmenu' => [
 	    'navbar' => ['open', '|', 'info'],
 	    'cwd' => ['reload', 'back', '|', 'upload', '|', 'sort', '|', 'info'],
-	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'edit', 'resize', '|', 'info']
+	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'edit', 'resize', '|', 'info']
 	],
 	'onlyMimes' => ["image"],
     ];
