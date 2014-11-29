@@ -8,6 +8,7 @@ use yii\web\Controller as BaseController;
 
 class Controller extends BaseController {
 
+    public $language;
     public $options = [
 	'uiOptions' => [
 	    'toolbar' => [
@@ -39,16 +40,17 @@ class Controller extends BaseController {
 
 	    $wid = new \yii\base\Widget;
 
-	    elFinderAsset::register($this->getView());
-
 	    $this->options['url'] = $ajax;
 
 	    if (!empty($this->language)) {
 
 		$this->options['lang'] = $this->language;
 
-		$this->getView()->registerJsFile(__DIR__ . "/assets/js/i18n/elfinder." . $this->language . ".js");
+		$languageFile = Yii::$app->assetManager->publish(__DIR__ . "/assets/js/i18n/elfinder." . $this->language . ".js");
+		$this->getView()->registerJsFile($languageFile[1],['depends' => elFinderAsset::className()]);
 	    }
+
+	    elFinderAsset::register($this->getView());
 
 	    if (empty($this->options['id'])) {
 		$this->options['id'] = $wid->getId();
