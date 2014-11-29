@@ -61,6 +61,10 @@ class Controller extends BaseController {
 		'yii\bootstrap\BootstrapAsset' => false,
 		'yii\web\JqueryAsset' => false,
 	    ];
+	    
+	    if(!empty($this->options['getFileCallback'])){
+		$this->options['getFileCallback'] = new \yii\web\JsExpression($this->options['getFileCallback']);
+	    }
 
 	    $this->getView()->registerJs("$('#" . $this->options['id'] . "').elfinder(" . Json::encode($this->options) . ").elfinder('instance');");
 	    $this->getView()->registerCss("#" . $this->options['id'] . " * {box-sizing: unset;}");
