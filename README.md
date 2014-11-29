@@ -75,7 +75,7 @@ Controller Action:
     public function actionElfinder() {
 
 	$elFinder = new \serhatozles\elfinder\elFinder;
-	$elFinder->connector([
+	echo $elFinder->connector([
 	    // 'debug' => true,
 	    'roots' => [
 		[
