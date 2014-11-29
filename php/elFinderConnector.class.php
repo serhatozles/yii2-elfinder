@@ -124,7 +124,7 @@ class elFinderConnector {
 			if (!empty($data['raw']) && !empty($data['error'])) {
 				exit($data['error']);
 			} else {
-				exit(json_encode($data));
+				echo json_encode($data);
 			}
 		}
 		
