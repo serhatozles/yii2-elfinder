@@ -10,6 +10,7 @@ use yii\helpers\Url;
 class elFinder extends \yii\base\Widget {
 
     public $ajax;
+    public $controller = 'elfinder';
     public $language;
     public $options = [];
     protected $elFinder;
@@ -17,7 +18,7 @@ class elFinder extends \yii\base\Widget {
     public function run() {
 
 	if (!empty($this->ajax)) {
-	    echo '<iframe src="' . Url::to(['elfinder/control', 'ajax' => $this->ajax]) . '" style="border: 0; width: 100%; height: 420px;"></iframe>';
+	    echo '<iframe src="' . Url::to([$this->controller . '/control', 'ajax' => $this->ajax]) . '" style="border: 0; width: 100%; height: 420px;"></iframe>';
 	}
     }
 

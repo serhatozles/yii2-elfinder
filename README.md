@@ -57,6 +57,11 @@ Add Main.php
 //		'onlyMimes' => ["image"],
 //	    ]
     ]
+//    'elfinder2' => [
+//	'class' => 'serhatozles\elfinder\Controller',
+//	...
+//    ]
+//    ...
 ],
 ```
 
@@ -64,6 +69,7 @@ View:
 ```php
     echo \serhatozles\elfinder\elFinder::widget([
 	'ajax' => Url::to(['site/elfinder']),
+//	'controller' => 'elfinder2',
     ]); 
 ```
 
