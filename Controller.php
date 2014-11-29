@@ -18,7 +18,7 @@ class Controller extends BaseController {
 		['info'],
 		['quicklook'],
 		['rm'],
-		['edit', 'resize'],
+		['resize'],
 		['search'],
 		['view', 'sort'],
 		['help']
@@ -27,7 +27,7 @@ class Controller extends BaseController {
 	'contextmenu' => [
 	    'navbar' => ['open', '|', 'info'],
 	    'cwd' => ['reload', 'back', '|', 'upload', '|', 'sort', '|', 'info'],
-	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'edit', 'resize', '|', 'info']
+	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'resize', '|', 'info']
 	],
 	'onlyMimes' => ["image"],
     ];
@@ -59,7 +59,7 @@ class Controller extends BaseController {
 		'yii\bootstrap\BootstrapAsset' => false,
 		'yii\web\JqueryAsset' => false,
 	    ];
-	    
+
 	    $this->getView()->registerJs("$('#" . $this->options['id'] . "').elfinder(" . Json::encode($this->options) . ").elfinder('instance');");
 	    $this->getView()->registerCss("#" . $this->options['id'] . " * {box-sizing: unset;}");
 

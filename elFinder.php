@@ -12,13 +12,14 @@ class elFinder extends \yii\base\Widget {
     public $ajax;
     public $controller = 'elfinder';
     public $language;
+    public $height = 420;
     public $options = [];
     protected $elFinder;
 
     public function run() {
 
 	if (!empty($this->ajax)) {
-	    echo '<iframe src="' . Url::to([$this->controller . '/control', 'ajax' => $this->ajax]) . '" style="border: 0; width: 100%; height: 420px;"></iframe>';
+	    echo '<iframe src="' . Url::to([$this->controller . '/control', 'ajax' => $this->ajax]) . '" style="border: 0; width: 100%; height: ' . $this->height . 'px;"></iframe>';
 	}
     }
 
