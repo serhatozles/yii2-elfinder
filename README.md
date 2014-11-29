@@ -34,7 +34,10 @@ Add Main.php
 'controllerMap' => [
     'elfinder' => [
 	'class' => 'serhatozles\elfinder\Controller',
-//	    'options' => ['uiOptions' => [
+//	    'options' => [
+////		'height' => 250,
+////		'getFileCallback' => 'function(url) { alert(url); }',
+//		'uiOptions' => [
 //		    'toolbar' => [
 //			['back', 'forward'],
 //			['netmount'],
@@ -70,6 +73,7 @@ View:
     echo \serhatozles\elfinder\elFinder::widget([
 	'ajax' => Url::to(['site/elfinder']),
 //	'controller' => 'elfinder2',
+//	'height' => 270,
     ]); 
 ```
 
