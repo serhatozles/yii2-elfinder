@@ -20,7 +20,7 @@ class Controller extends BaseController {
 		['info'],
 		['quicklook'],
 		['rm'],
-		['resize'],
+		['rename', 'resize'],
 		['search'],
 		['view', 'sort'],
 		['help']
@@ -29,7 +29,7 @@ class Controller extends BaseController {
 	'contextmenu' => [
 	    'navbar' => ['open', '|', 'info'],
 	    'cwd' => ['reload', 'back', '|', 'upload', '|', 'sort', '|', 'info'],
-	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'resize', '|', 'info']
+	    'files' => ['getfile', '|', 'open', 'quicklook', '|', 'download', '|', 'rm', '|', 'rename', 'resize', '|', 'info']
 	],
 	'onlyMimes' => ["image"],
     ];
